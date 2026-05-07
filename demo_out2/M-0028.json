@@ -1,0 +1,93 @@
+{
+  "msg_id": "M-0028",
+  "decision": "HOLD",
+  "reason_codes": [
+    "UNDERDELIVERED"
+  ],
+  "reasons": [
+    {
+      "code": "UNDERDELIVERED",
+      "severity": "HOLD",
+      "message": "Invoice claims 81797 but only 58317.00 worth of goods has been received."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-010",
+    "legal_name": "Verkstads Verkstad & Co AB",
+    "iban": "SE9660256342160733754330",
+    "default_currency": "SEK",
+    "last_verified_at": "2026-02-14",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "F21182",
+    "po_numbers": [
+      "PO-2026-0030"
+    ],
+    "claimed_total": "81797",
+    "currency": "SEK",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email references invoice F21182 and states 'The total amount due is SEK 81,797.00', indicating the claimed total. The PO number mentioned is 'PO-2026-0030'. There is no explicit IBAN provided in the email or attachments, as it states 'please see attached PDF' for IBAN details. The intent is classified as 'invoice' since the email is requesting payment for goods received."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0030",
+        "po_found": true,
+        "po_vendor_id": "V-010",
+        "po_currency": "SEK",
+        "authorized_total": "81797.00",
+        "received_total": "58317.00",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0030",
+            "po_line_no": 1,
+            "sku": "CAL-008",
+            "quantity_ordered": 9,
+            "quantity_received": 5,
+            "condition": "OK",
+            "unit_price": "1197.00",
+            "line_total": "10773.00"
+          },
+          {
+            "po_number": "PO-2026-0030",
+            "po_line_no": 2,
+            "sku": "RAW-002",
+            "quantity_ordered": 12,
+            "quantity_received": 12,
+            "condition": "OK",
+            "unit_price": "4361.00",
+            "line_total": "52332.00"
+          },
+          {
+            "po_number": "PO-2026-0030",
+            "po_line_no": 3,
+            "sku": "CAL-001",
+            "quantity_ordered": 4,
+            "quantity_received": 0,
+            "condition": "OK",
+            "unit_price": "1757.00",
+            "line_total": "7028.00"
+          },
+          {
+            "po_number": "PO-2026-0030",
+            "po_line_no": 4,
+            "sku": "RAW-005",
+            "quantity_ordered": 12,
+            "quantity_received": 0,
+            "condition": "OK",
+            "unit_price": "972.00",
+            "line_total": "11664.00"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "81797.00",
+    "aggregate_received_total": "58317.00",
+    "currencies_seen": [
+      "SEK"
+    ]
+  },
+  "audit_summary": "HOLD — UNDERDELIVERED"
+}

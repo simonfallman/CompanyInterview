@@ -1,0 +1,83 @@
+{
+  "msg_id": "M-0005",
+  "decision": "HOLD",
+  "reason_codes": [
+    "CURRENCY_MISMATCH"
+  ],
+  "reasons": [
+    {
+      "code": "CURRENCY_MISMATCH",
+      "severity": "HOLD",
+      "message": "Invoice currency EUR does not match PO PO-2026-0013 currency SEK."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-013",
+    "legal_name": "Technik Antriebstechnik GmbH & Co. KG",
+    "iban": "DE35513904173838569324",
+    "default_currency": "EUR",
+    "last_verified_at": "2025-10-01",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "INV-2026-2633",
+    "po_numbers": [
+      "PO-2026-0013"
+    ],
+    "claimed_total": "1216.38",
+    "currency": "EUR",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email explicitly states 'Invoice total: EUR 1,216.38', which indicates the amount being requested for payment. The PO number 'PO-2026-0013' is referenced in the body of the email, confirming the associated purchase order. There is no IBAN provided in the email or attachment, as it states 'Please see attached PDF' for IBAN details, which does not count as an explicit mention."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0013",
+        "po_found": true,
+        "po_vendor_id": "V-013",
+        "po_currency": "SEK",
+        "authorized_total": "13988.00",
+        "received_total": "13988.00",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0013",
+            "po_line_no": 1,
+            "sku": "RPL-009",
+            "quantity_ordered": 4,
+            "quantity_received": 4,
+            "condition": "OK",
+            "unit_price": "1276.00",
+            "line_total": "5104.00"
+          },
+          {
+            "po_number": "PO-2026-0013",
+            "po_line_no": 2,
+            "sku": "RPL-005",
+            "quantity_ordered": 4,
+            "quantity_received": 4,
+            "condition": "OK",
+            "unit_price": "206.00",
+            "line_total": "824.00"
+          },
+          {
+            "po_number": "PO-2026-0013",
+            "po_line_no": 3,
+            "sku": "RAW-008",
+            "quantity_ordered": 10,
+            "quantity_received": 10,
+            "condition": "OK",
+            "unit_price": "806.00",
+            "line_total": "8060.00"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "13988.00",
+    "aggregate_received_total": "13988.00",
+    "currencies_seen": [
+      "SEK"
+    ]
+  },
+  "audit_summary": "HOLD — CURRENCY_MISMATCH"
+}

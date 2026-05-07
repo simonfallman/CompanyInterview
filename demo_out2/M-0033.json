@@ -1,0 +1,83 @@
+{
+  "msg_id": "M-0033",
+  "decision": "APPROVE",
+  "reason_codes": [
+    "CLEAN_MATCH"
+  ],
+  "reasons": [
+    {
+      "code": "CLEAN_MATCH",
+      "severity": "APPROVE",
+      "message": "All checks passed within tolerance."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-005",
+    "legal_name": "Norrlands Industri AB",
+    "iban": "SE8789638346578713315098",
+    "default_currency": "SEK",
+    "last_verified_at": "2025-10-19",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "INV-2026-2027",
+    "po_numbers": [
+      "PO-2026-0045"
+    ],
+    "claimed_total": "12394",
+    "currency": "SEK",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email includes the invoice number 'INV-2026-2027' and references the purchase order 'PO-2026-0045'. It explicitly states that the total amount due is 'SEK 12,394.00', which is the claimed total. There is no IBAN provided in the email or attachment, as it states 'Please contact for details'. The intent is classified as 'invoice' since the email is requesting payment for the goods listed in the invoice."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0045",
+        "po_found": true,
+        "po_vendor_id": "V-005",
+        "po_currency": "SEK",
+        "authorized_total": "12394.00",
+        "received_total": "12394.00",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0045",
+            "po_line_no": 1,
+            "sku": "RAW-006",
+            "quantity_ordered": 4,
+            "quantity_received": 4,
+            "condition": "OK",
+            "unit_price": "688.00",
+            "line_total": "2752.00"
+          },
+          {
+            "po_number": "PO-2026-0045",
+            "po_line_no": 2,
+            "sku": "RAW-009",
+            "quantity_ordered": 8,
+            "quantity_received": 8,
+            "condition": "OK",
+            "unit_price": "711.00",
+            "line_total": "5688.00"
+          },
+          {
+            "po_number": "PO-2026-0045",
+            "po_line_no": 3,
+            "sku": "PPE-009",
+            "quantity_ordered": 6,
+            "quantity_received": 6,
+            "condition": "OK",
+            "unit_price": "659.00",
+            "line_total": "3954.00"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "12394.00",
+    "aggregate_received_total": "12394.00",
+    "currencies_seen": [
+      "SEK"
+    ]
+  },
+  "audit_summary": "All checks passed; safe to authorize payment."
+}

@@ -1,0 +1,73 @@
+{
+  "msg_id": "M-0039",
+  "decision": "APPROVE",
+  "reason_codes": [
+    "CLEAN_MATCH"
+  ],
+  "reasons": [
+    {
+      "code": "CLEAN_MATCH",
+      "severity": "APPROVE",
+      "message": "All checks passed within tolerance."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-020",
+    "legal_name": "Italiana Industria S.p.A.",
+    "iban": "IT28M5650634441008988226091",
+    "default_currency": "EUR",
+    "last_verified_at": "2025-11-14",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "F26405",
+    "po_numbers": [
+      "PO-2026-0020"
+    ],
+    "claimed_total": "893.9",
+    "currency": "EUR",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email references 'Invoice F26405' and states 'Total: EUR 893.90', indicating the amount requested for payment. The PO number 'PO-2026-0020' is mentioned in both the body and the attachment, confirming its relevance. There is no IBAN provided in the email or attachment, as it states '[please refer to account details]'. The intent is classified as 'invoice' since it is requesting payment for goods received."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0020",
+        "po_found": true,
+        "po_vendor_id": "V-020",
+        "po_currency": "EUR",
+        "authorized_total": "1292.84",
+        "received_total": "1471.62",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0020",
+            "po_line_no": 1,
+            "sku": "CAL-002",
+            "quantity_ordered": 4,
+            "quantity_received": 5,
+            "condition": "OK",
+            "unit_price": "178.78",
+            "line_total": "715.12"
+          },
+          {
+            "po_number": "PO-2026-0020",
+            "po_line_no": 2,
+            "sku": "RPL-006",
+            "quantity_ordered": 4,
+            "quantity_received": 4,
+            "condition": "OK",
+            "unit_price": "144.43",
+            "line_total": "577.72"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "1292.84",
+    "aggregate_received_total": "1471.62",
+    "currencies_seen": [
+      "EUR"
+    ]
+  },
+  "audit_summary": "All checks passed; safe to authorize payment."
+}

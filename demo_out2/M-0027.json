@@ -1,0 +1,83 @@
+{
+  "msg_id": "M-0027",
+  "decision": "APPROVE",
+  "reason_codes": [
+    "CLEAN_MATCH"
+  ],
+  "reasons": [
+    {
+      "code": "CLEAN_MATCH",
+      "severity": "APPROVE",
+      "message": "All checks passed within tolerance."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-008",
+    "legal_name": "Götaland Teknik AB",
+    "iban": "SE6346247510799118384251",
+    "default_currency": "SEK",
+    "last_verified_at": "2026-03-14",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "F24113",
+    "po_numbers": [
+      "PO-2026-0028"
+    ],
+    "claimed_total": "24154",
+    "currency": "SEK",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email includes the invoice number F24113 and references the PO number PO-2026-0028. The claimed total is explicitly stated as 'SEK 24,154.00'. There is no IBAN provided in the email or attachment, as it states 'please insert IBAN'. The intent is classified as 'invoice' since the email is requesting payment for the attached invoice."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0028",
+        "po_found": true,
+        "po_vendor_id": "V-008",
+        "po_currency": "SEK",
+        "authorized_total": "24154.00",
+        "received_total": "24154.00",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0028",
+            "po_line_no": 1,
+            "sku": "FST-007",
+            "quantity_ordered": 16,
+            "quantity_received": 16,
+            "condition": "OK",
+            "unit_price": "133.00",
+            "line_total": "2128.00"
+          },
+          {
+            "po_number": "PO-2026-0028",
+            "po_line_no": 2,
+            "sku": "RPL-012",
+            "quantity_ordered": 13,
+            "quantity_received": 13,
+            "condition": "OK",
+            "unit_price": "682.00",
+            "line_total": "8866.00"
+          },
+          {
+            "po_number": "PO-2026-0028",
+            "po_line_no": 3,
+            "sku": "FST-012",
+            "quantity_ordered": 20,
+            "quantity_received": 20,
+            "condition": "OK",
+            "unit_price": "658.00",
+            "line_total": "13160.00"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "24154.00",
+    "aggregate_received_total": "24154.00",
+    "currencies_seen": [
+      "SEK"
+    ]
+  },
+  "audit_summary": "All checks passed; safe to authorize payment."
+}

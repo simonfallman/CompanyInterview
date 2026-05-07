@@ -1,0 +1,38 @@
+{
+  "msg_id": "M-0050",
+  "decision": "HOLD",
+  "reason_codes": [
+    "MISSING_PO_REFERENCE"
+  ],
+  "reasons": [
+    {
+      "code": "MISSING_PO_REFERENCE",
+      "severity": "HOLD",
+      "message": "Invoice does not reference a PO. AP must clarify with vendor."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-007",
+    "legal_name": "Nordic Industri AB",
+    "iban": "SE4746872343098050097882",
+    "default_currency": "SEK",
+    "last_verified_at": "2025-11-24",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "5217",
+    "po_numbers": [],
+    "claimed_total": null,
+    "currency": "SEK",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email references 'invoice 5217' which is the invoice number. The total amount is stated as 'SEK [amount pending]', indicating a pending total but not providing a specific amount. The currency is clearly stated as SEK. There is no IBAN provided in the email or attachment, only a note to contact for details. The intent is classified as 'invoice' since the email is requesting payment for the services rendered."
+  },
+  "match": {
+    "matched_pos": [],
+    "aggregate_authorized_total": "0",
+    "aggregate_received_total": "0",
+    "currencies_seen": []
+  },
+  "audit_summary": "HOLD — MISSING_PO_REFERENCE"
+}

@@ -1,0 +1,38 @@
+{
+  "msg_id": "M-0049",
+  "decision": "HOLD",
+  "reason_codes": [
+    "MISSING_PO_REFERENCE"
+  ],
+  "reasons": [
+    {
+      "code": "MISSING_PO_REFERENCE",
+      "severity": "HOLD",
+      "message": "Invoice does not reference a PO. AP must clarify with vendor."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-001",
+    "legal_name": "Mälardal Komponenter AB",
+    "iban": "SE4418196001338908386379",
+    "default_currency": "SEK",
+    "last_verified_at": "2025-11-19",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "8289-B",
+    "po_numbers": [],
+    "claimed_total": "0",
+    "currency": "SEK",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email references 'invoice 8289-B' and states 'Total as per the invoice', indicating a request for payment. The invoice attachment confirms the total amount due is 'SEK 0.00'. No IBAN is explicitly provided, as it states 'please contact for details'. There are no PO numbers mentioned in the email or attachment."
+  },
+  "match": {
+    "matched_pos": [],
+    "aggregate_authorized_total": "0",
+    "aggregate_received_total": "0",
+    "currencies_seen": []
+  },
+  "audit_summary": "HOLD — MISSING_PO_REFERENCE"
+}

@@ -1,0 +1,73 @@
+{
+  "msg_id": "M-0011",
+  "decision": "HOLD",
+  "reason_codes": [
+    "UNDERDELIVERED"
+  ],
+  "reasons": [
+    {
+      "code": "UNDERDELIVERED",
+      "severity": "HOLD",
+      "message": "Invoice claims 1233.12 but only 193.48 worth of goods has been received."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-011",
+    "legal_name": "Industrie Mechanik AG",
+    "iban": "DE63231400710898071180",
+    "default_currency": "EUR",
+    "last_verified_at": "2025-12-06",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "INV-2026-4513",
+    "po_numbers": [
+      "PO-2026-0011"
+    ],
+    "claimed_total": "1233.12",
+    "currency": "EUR",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email includes the invoice number 'INV-2026-4513' and references the PO number 'PO-2026-0011'. The total amount requested for payment is stated as 'Gesamtsumme: 1.233,12 EUR'. There is no IBAN provided in the email or attachment, as it states 'Bitte IBAN eintragen'. The intent is classified as 'invoice' since the email is requesting payment for the goods listed."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0011",
+        "po_found": true,
+        "po_vendor_id": "V-011",
+        "po_currency": "EUR",
+        "authorized_total": "1233.12",
+        "received_total": "193.48",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0011",
+            "po_line_no": 1,
+            "sku": "LUB-002",
+            "quantity_ordered": 7,
+            "quantity_received": 0,
+            "condition": "OK",
+            "unit_price": "148.52",
+            "line_total": "1039.64"
+          },
+          {
+            "po_number": "PO-2026-0011",
+            "po_line_no": 2,
+            "sku": "LUB-010",
+            "quantity_ordered": 1,
+            "quantity_received": 1,
+            "condition": "OK",
+            "unit_price": "193.48",
+            "line_total": "193.48"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "1233.12",
+    "aggregate_received_total": "193.48",
+    "currencies_seen": [
+      "EUR"
+    ]
+  },
+  "audit_summary": "HOLD — UNDERDELIVERED"
+}

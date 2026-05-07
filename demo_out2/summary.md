@@ -1,0 +1,20 @@
+# Run summary
+
+**Emails processed:** 77
+
+## Decisions
+- APPROVE: 38
+- HOLD: 23
+- REJECT: 16
+
+## Reason-code distribution
+- `CLEAN_MATCH`: 38
+- `UNDERDELIVERED`: 11
+- `BANK_CHANGE_REQUIRES_VERIFICATION`: 10
+- `IBAN_MISMATCH`: 8
+- `UNKNOWN_SENDER`: 8
+- `FAILED_EXTRACTION`: 6
+- `DELIVERY_EXCEPTION`: 4
+- `MISSING_PO_REFERENCE`: 4
+- `CURRENCY_MISMATCH`: 2
+- `UNKNOWN_PO`: 1

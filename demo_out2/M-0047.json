@@ -1,0 +1,44 @@
+{
+  "msg_id": "M-0047",
+  "decision": "REJECT",
+  "reason_codes": [
+    "IBAN_MISMATCH",
+    "BANK_CHANGE_REQUIRES_VERIFICATION"
+  ],
+  "reasons": [
+    {
+      "code": "IBAN_MISMATCH",
+      "severity": "REJECT",
+      "message": "IBAN in message does not match vendor master IBAN. Message IBAN: 'SE6346247510799118384252'; vendor IBAN on file: 'SE6346247510799118384251'."
+    },
+    {
+      "code": "BANK_CHANGE_REQUIRES_VERIFICATION",
+      "severity": "HOLD",
+      "message": "Email requests a change to bank/IBAN details. Never auto-action; AP must verify out-of-band before updating."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-008",
+    "legal_name": "Götaland Teknik AB",
+    "iban": "SE6346247510799118384251",
+    "default_currency": "SEK",
+    "last_verified_at": "2026-03-14",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": null,
+    "po_numbers": [],
+    "claimed_total": null,
+    "currency": null,
+    "iban_in_message": "SE6346247510799118384252",
+    "intent": "bank_change",
+    "reasoning": "The email explicitly states that Götaland Teknik AB will be updating their bank account details, with the IBAN provided as 'SE6346247510799118384252'. The intent is classified as 'bank_change' because the primary purpose of the email is to inform about the update of bank account details, with no request for payment or invoice mentioned."
+  },
+  "match": {
+    "matched_pos": [],
+    "aggregate_authorized_total": "0",
+    "aggregate_received_total": "0",
+    "currencies_seen": []
+  },
+  "audit_summary": "REJECT — IBAN_MISMATCH, BANK_CHANGE_REQUIRES_VERIFICATION"
+}

@@ -1,0 +1,63 @@
+{
+  "msg_id": "M-0037",
+  "decision": "APPROVE",
+  "reason_codes": [
+    "CLEAN_MATCH"
+  ],
+  "reasons": [
+    {
+      "code": "CLEAN_MATCH",
+      "severity": "APPROVE",
+      "message": "All checks passed within tolerance."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-009",
+    "legal_name": "Industri Verktyg Aktiebolag",
+    "iban": "SE7748740164005242786801",
+    "default_currency": "SEK",
+    "last_verified_at": "2025-11-30",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "2767",
+    "po_numbers": [
+      "PO-2026-0049"
+    ],
+    "claimed_total": "10237",
+    "currency": "SEK",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email explicitly states 'We are submitting invoice number 2767 for your processing' which identifies the invoice number. The purchase order referenced is 'PO-2026-0049'. The total amount due is clearly stated as 'SEK 10,237.00'. The intent is classified as 'invoice' since the email is requesting payment for goods received."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0049",
+        "po_found": true,
+        "po_vendor_id": "V-009",
+        "po_currency": "SEK",
+        "authorized_total": "10237.00",
+        "received_total": "10237.00",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0049",
+            "po_line_no": 1,
+            "sku": "PPE-008",
+            "quantity_ordered": 29,
+            "quantity_received": 29,
+            "condition": "OK",
+            "unit_price": "353.00",
+            "line_total": "10237.00"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "10237.00",
+    "aggregate_received_total": "10237.00",
+    "currencies_seen": [
+      "SEK"
+    ]
+  },
+  "audit_summary": "All checks passed; safe to authorize payment."
+}

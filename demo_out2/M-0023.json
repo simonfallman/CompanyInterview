@@ -1,0 +1,93 @@
+{
+  "msg_id": "M-0023",
+  "decision": "APPROVE",
+  "reason_codes": [
+    "CLEAN_MATCH"
+  ],
+  "reasons": [
+    {
+      "code": "CLEAN_MATCH",
+      "severity": "APPROVE",
+      "message": "All checks passed within tolerance."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-002",
+    "legal_name": "Industri Bearings & Co AB",
+    "iban": "SE3618495931034131647525",
+    "default_currency": "SEK",
+    "last_verified_at": "2025-09-19",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "F24863",
+    "po_numbers": [
+      "PO-2026-0022"
+    ],
+    "claimed_total": "40249",
+    "currency": "SEK",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email states 'Total due is SEK 40,249.00', which indicates the amount being requested for payment. The PO number 'PO-2026-0022' is explicitly mentioned in both the email body and the invoice attachment. There is no IBAN provided in the email or attachment, as it states 'please see attached or contact us' instead of providing a specific IBAN."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0022",
+        "po_found": true,
+        "po_vendor_id": "V-002",
+        "po_currency": "SEK",
+        "authorized_total": "40249.00",
+        "received_total": "40249.00",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0022",
+            "po_line_no": 1,
+            "sku": "RPL-009",
+            "quantity_ordered": 4,
+            "quantity_received": 4,
+            "condition": "OK",
+            "unit_price": "1614.00",
+            "line_total": "6456.00"
+          },
+          {
+            "po_number": "PO-2026-0022",
+            "po_line_no": 2,
+            "sku": "RPL-006",
+            "quantity_ordered": 5,
+            "quantity_received": 5,
+            "condition": "OK",
+            "unit_price": "2000.00",
+            "line_total": "10000.00"
+          },
+          {
+            "po_number": "PO-2026-0022",
+            "po_line_no": 3,
+            "sku": "RPL-011",
+            "quantity_ordered": 3,
+            "quantity_received": 3,
+            "condition": "OK",
+            "unit_price": "5035.00",
+            "line_total": "15105.00"
+          },
+          {
+            "po_number": "PO-2026-0022",
+            "po_line_no": 4,
+            "sku": "RPL-008",
+            "quantity_ordered": 4,
+            "quantity_received": 4,
+            "condition": "OK",
+            "unit_price": "2172.00",
+            "line_total": "8688.00"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "40249.00",
+    "aggregate_received_total": "40249.00",
+    "currencies_seen": [
+      "SEK"
+    ]
+  },
+  "audit_summary": "All checks passed; safe to authorize payment."
+}

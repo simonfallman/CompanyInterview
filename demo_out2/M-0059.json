@@ -1,0 +1,44 @@
+{
+  "msg_id": "M-0059",
+  "decision": "REJECT",
+  "reason_codes": [
+    "IBAN_MISMATCH",
+    "BANK_CHANGE_REQUIRES_VERIFICATION"
+  ],
+  "reasons": [
+    {
+      "code": "IBAN_MISMATCH",
+      "severity": "REJECT",
+      "message": "IBAN in message does not match vendor master IBAN. Message IBAN: 'GB29NWBK60161331926819'; vendor IBAN on file: 'DE75110321831532949524'."
+    },
+    {
+      "code": "BANK_CHANGE_REQUIRES_VERIFICATION",
+      "severity": "HOLD",
+      "message": "Email requests a change to bank/IBAN details. Never auto-action; AP must verify out-of-band before updating."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-012",
+    "legal_name": "Werk Maschinen AG",
+    "iban": "DE75110321831532949524",
+    "default_currency": "EUR",
+    "last_verified_at": "2024-09-12",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": null,
+    "po_numbers": [],
+    "claimed_total": null,
+    "currency": null,
+    "iban_in_message": "GB29NWBK60161331926819",
+    "intent": "bank_change",
+    "reasoning": "The email is requesting an update to bank details, as indicated by the phrase 'Please update our records to use the new bank details for all open and future invoices' and the explicit mention of an IBAN: 'Use this IBAN: GB29NWBK60161331926819'. There are no references to an invoice number, PO numbers, or a claimed total, which is why those fields are null."
+  },
+  "match": {
+    "matched_pos": [],
+    "aggregate_authorized_total": "0",
+    "aggregate_received_total": "0",
+    "currencies_seen": []
+  },
+  "audit_summary": "REJECT — IBAN_MISMATCH, BANK_CHANGE_REQUIRES_VERIFICATION"
+}

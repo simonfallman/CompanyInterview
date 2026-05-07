@@ -1,0 +1,38 @@
+{
+  "msg_id": "M-0076",
+  "decision": "HOLD",
+  "reason_codes": [
+    "FAILED_EXTRACTION"
+  ],
+  "reasons": [
+    {
+      "code": "FAILED_EXTRACTION",
+      "severity": "HOLD",
+      "message": "LLM could not extract structured fields from this email."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-010",
+    "legal_name": "Verkstads Verkstad & Co AB",
+    "iban": "SE9660256342160733754330",
+    "default_currency": "SEK",
+    "last_verified_at": "2026-02-14",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": null,
+    "po_numbers": [],
+    "claimed_total": null,
+    "currency": null,
+    "iban_in_message": null,
+    "intent": "unknown",
+    "reasoning": "The email does not request payment for any specific invoice or amount, nor does it mention any PO numbers or an IBAN. It primarily discusses an updated price list and its effective date. Therefore, the intent is classified as 'unknown'."
+  },
+  "match": {
+    "matched_pos": [],
+    "aggregate_authorized_total": "0",
+    "aggregate_received_total": "0",
+    "currencies_seen": []
+  },
+  "audit_summary": "HOLD — FAILED_EXTRACTION"
+}

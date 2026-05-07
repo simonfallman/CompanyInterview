@@ -1,0 +1,63 @@
+{
+  "msg_id": "M-0002",
+  "decision": "APPROVE",
+  "reason_codes": [
+    "CLEAN_MATCH"
+  ],
+  "reasons": [
+    {
+      "code": "CLEAN_MATCH",
+      "severity": "APPROVE",
+      "message": "All checks passed within tolerance."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-006",
+    "legal_name": "Götaland Verkstad AB",
+    "iban": "SE6411656670106513338726",
+    "default_currency": "SEK",
+    "last_verified_at": "2025-09-03",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "867376",
+    "po_numbers": [
+      "PO-2026-0006"
+    ],
+    "claimed_total": "1140",
+    "currency": "SEK",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email states, 'We are submitting invoice number 867376 for your processing,' indicating a request for payment. The purchase order referenced is 'PO-2026-0006.' The total amount due is clearly stated as 'SEK 1,140.00.' There is no IBAN provided in the email or attachment, as it states '[please insert].' Therefore, the intent is classified as 'invoice'."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0006",
+        "po_found": true,
+        "po_vendor_id": "V-006",
+        "po_currency": "SEK",
+        "authorized_total": "1140.00",
+        "received_total": "1140.00",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0006",
+            "po_line_no": 1,
+            "sku": "LUB-008",
+            "quantity_ordered": 4,
+            "quantity_received": 4,
+            "condition": "OK",
+            "unit_price": "285.00",
+            "line_total": "1140.00"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "1140.00",
+    "aggregate_received_total": "1140.00",
+    "currencies_seen": [
+      "SEK"
+    ]
+  },
+  "audit_summary": "All checks passed; safe to authorize payment."
+}

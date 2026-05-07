@@ -1,0 +1,93 @@
+{
+  "msg_id": "M-0006",
+  "decision": "HOLD",
+  "reason_codes": [
+    "CURRENCY_MISMATCH"
+  ],
+  "reasons": [
+    {
+      "code": "CURRENCY_MISMATCH",
+      "severity": "HOLD",
+      "message": "Invoice currency EUR does not match PO PO-2026-0035 currency SEK."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-015",
+    "legal_name": "Européenne Maintenance SAS",
+    "iban": "FR1261938182574133672737315",
+    "default_currency": "EUR",
+    "last_verified_at": "2024-07-31",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "5229",
+    "po_numbers": [
+      "PO-2026-0035"
+    ],
+    "claimed_total": "6542.69",
+    "currency": "EUR",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email explicitly states 'sending invoice 5229 for PO-2026-0035' which indicates the invoice number and the associated PO number. The total amount requested is clearly mentioned as 'total is EUR 6,542.69'. There is no IBAN provided in the email or attachment, as it states 'please refer to attached PDF' for IBAN details, which does not count as an explicit mention. Therefore, the intent is classified as 'invoice' since it is requesting payment for goods."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0035",
+        "po_found": true,
+        "po_vendor_id": "V-015",
+        "po_currency": "SEK",
+        "authorized_total": "75242.00",
+        "received_total": "61239.00",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0035",
+            "po_line_no": 1,
+            "sku": "PPE-006",
+            "quantity_ordered": 19,
+            "quantity_received": 0,
+            "condition": "OK",
+            "unit_price": "222.00",
+            "line_total": "4218.00"
+          },
+          {
+            "po_number": "PO-2026-0035",
+            "po_line_no": 2,
+            "sku": "PPE-012",
+            "quantity_ordered": 5,
+            "quantity_received": 5,
+            "condition": "OK",
+            "unit_price": "2945.00",
+            "line_total": "14725.00"
+          },
+          {
+            "po_number": "PO-2026-0035",
+            "po_line_no": 3,
+            "sku": "RAW-010",
+            "quantity_ordered": 5,
+            "quantity_received": 0,
+            "condition": "OK",
+            "unit_price": "1957.00",
+            "line_total": "9785.00"
+          },
+          {
+            "po_number": "PO-2026-0035",
+            "po_line_no": 4,
+            "sku": "RAW-002",
+            "quantity_ordered": 13,
+            "quantity_received": 13,
+            "condition": "OK",
+            "unit_price": "3578.00",
+            "line_total": "46514.00"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "75242.00",
+    "aggregate_received_total": "61239.00",
+    "currencies_seen": [
+      "SEK"
+    ]
+  },
+  "audit_summary": "HOLD — CURRENCY_MISMATCH"
+}

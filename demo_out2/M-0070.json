@@ -1,0 +1,49 @@
+{
+  "msg_id": "M-0070",
+  "decision": "REJECT",
+  "reason_codes": [
+    "UNKNOWN_SENDER",
+    "UNKNOWN_PO"
+  ],
+  "reasons": [
+    {
+      "code": "UNKNOWN_SENDER",
+      "severity": "REJECT",
+      "message": "Sender does not match any vendor in the master file."
+    },
+    {
+      "code": "UNKNOWN_PO",
+      "severity": "HOLD",
+      "message": "PO DN-44231 referenced in email is not in the ERP."
+    }
+  ],
+  "vendor": null,
+  "extracted": {
+    "invoice_number": null,
+    "po_numbers": [
+      "DN-44231"
+    ],
+    "claimed_total": null,
+    "currency": null,
+    "iban_in_message": null,
+    "intent": "unknown",
+    "reasoning": "The email references delivery slip DN-44231, which is noted as a PO number. However, there is no request for payment or any monetary total mentioned, nor is there a currency specified. The intent of the email is unclear as it discusses a candidate brief rather than a financial transaction."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "DN-44231",
+        "po_found": false,
+        "po_vendor_id": null,
+        "po_currency": null,
+        "authorized_total": "0",
+        "received_total": "0",
+        "line_diffs": []
+      }
+    ],
+    "aggregate_authorized_total": "0",
+    "aggregate_received_total": "0",
+    "currencies_seen": []
+  },
+  "audit_summary": "REJECT — UNKNOWN_SENDER, UNKNOWN_PO"
+}

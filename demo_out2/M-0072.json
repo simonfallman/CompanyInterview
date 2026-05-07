@@ -1,0 +1,73 @@
+{
+  "msg_id": "M-0072",
+  "decision": "APPROVE",
+  "reason_codes": [
+    "CLEAN_MATCH"
+  ],
+  "reasons": [
+    {
+      "code": "CLEAN_MATCH",
+      "severity": "APPROVE",
+      "message": "All checks passed within tolerance."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-009",
+    "legal_name": "Industri Verktyg Aktiebolag",
+    "iban": "SE7748740164005242786801",
+    "default_currency": "SEK",
+    "last_verified_at": "2025-11-30",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": null,
+    "po_numbers": [
+      "PO-2026-0009"
+    ],
+    "claimed_total": null,
+    "currency": null,
+    "iban_in_message": null,
+    "intent": "followup",
+    "reasoning": "The email acknowledges receipt of a purchase order (PO-2026-0009) but does not request payment or provide any monetary total. The intent is classified as 'followup' because it refers to the acknowledgment of the order without introducing a new request."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0009",
+        "po_found": true,
+        "po_vendor_id": "V-009",
+        "po_currency": "SEK",
+        "authorized_total": "13451.00",
+        "received_total": "13451.00",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0009",
+            "po_line_no": 1,
+            "sku": "CAL-005",
+            "quantity_ordered": 3,
+            "quantity_received": 3,
+            "condition": "OK",
+            "unit_price": "2989.00",
+            "line_total": "8967.00"
+          },
+          {
+            "po_number": "PO-2026-0009",
+            "po_line_no": 2,
+            "sku": "PPE-004",
+            "quantity_ordered": 38,
+            "quantity_received": 38,
+            "condition": "OK",
+            "unit_price": "118.00",
+            "line_total": "4484.00"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "13451.00",
+    "aggregate_received_total": "13451.00",
+    "currencies_seen": [
+      "SEK"
+    ]
+  },
+  "audit_summary": "All checks passed; safe to authorize payment."
+}

@@ -1,0 +1,73 @@
+{
+  "msg_id": "M-0031",
+  "decision": "APPROVE",
+  "reason_codes": [
+    "CLEAN_MATCH"
+  ],
+  "reasons": [
+    {
+      "code": "CLEAN_MATCH",
+      "severity": "APPROVE",
+      "message": "All checks passed within tolerance."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-003",
+    "legal_name": "Nordic Maskin AB",
+    "iban": "SE5739537672423884969653",
+    "default_currency": "SEK",
+    "last_verified_at": "2025-12-02",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "INV-2026-3685",
+    "po_numbers": [
+      "PO-2026-0043"
+    ],
+    "claimed_total": "4491",
+    "currency": "SEK",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email is requesting payment for the invoice INV-2026-3685, which is explicitly stated as having a 'Total due: SEK 4,491.00.' The PO number referenced is 'PO-2026-0043' and is included in both the email body and the invoice attachment."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0043",
+        "po_found": true,
+        "po_vendor_id": "V-003",
+        "po_currency": "SEK",
+        "authorized_total": "4491.00",
+        "received_total": "4491.00",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0043",
+            "po_line_no": 1,
+            "sku": "LUB-007",
+            "quantity_ordered": 1,
+            "quantity_received": 1,
+            "condition": "OK",
+            "unit_price": "1023.00",
+            "line_total": "1023.00"
+          },
+          {
+            "po_number": "PO-2026-0043",
+            "po_line_no": 2,
+            "sku": "FST-007",
+            "quantity_ordered": 34,
+            "quantity_received": 34,
+            "condition": "OK",
+            "unit_price": "102.00",
+            "line_total": "3468.00"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "4491.00",
+    "aggregate_received_total": "4491.00",
+    "currencies_seen": [
+      "SEK"
+    ]
+  },
+  "audit_summary": "All checks passed; safe to authorize payment."
+}

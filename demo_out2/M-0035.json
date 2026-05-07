@@ -1,0 +1,73 @@
+{
+  "msg_id": "M-0035",
+  "decision": "APPROVE",
+  "reason_codes": [
+    "CLEAN_MATCH"
+  ],
+  "reasons": [
+    {
+      "code": "CLEAN_MATCH",
+      "severity": "APPROVE",
+      "message": "All checks passed within tolerance."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-007",
+    "legal_name": "Nordic Industri AB",
+    "iban": "SE4746872343098050097882",
+    "default_currency": "SEK",
+    "last_verified_at": "2025-11-24",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "5859-B",
+    "po_numbers": [
+      "PO-2026-0047"
+    ],
+    "claimed_total": "11548",
+    "currency": "SEK",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email includes the invoice number '5859-B' and references the PO number 'PO-2026-0047'. The claimed total is explicitly stated as 'SEK 11,548.00'. The intent is classified as 'invoice' because the email is requesting payment for the attached invoice."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0047",
+        "po_found": true,
+        "po_vendor_id": "V-007",
+        "po_currency": "SEK",
+        "authorized_total": "11548.00",
+        "received_total": "11548.00",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0047",
+            "po_line_no": 1,
+            "sku": "PPE-001",
+            "quantity_ordered": 62,
+            "quantity_received": 62,
+            "condition": "OK",
+            "unit_price": "138.00",
+            "line_total": "8556.00"
+          },
+          {
+            "po_number": "PO-2026-0047",
+            "po_line_no": 2,
+            "sku": "PPE-011",
+            "quantity_ordered": 2,
+            "quantity_received": 2,
+            "condition": "OK",
+            "unit_price": "1496.00",
+            "line_total": "2992.00"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "11548.00",
+    "aggregate_received_total": "11548.00",
+    "currencies_seen": [
+      "SEK"
+    ]
+  },
+  "audit_summary": "All checks passed; safe to authorize payment."
+}

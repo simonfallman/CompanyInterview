@@ -1,0 +1,83 @@
+{
+  "msg_id": "M-0004",
+  "decision": "APPROVE",
+  "reason_codes": [
+    "CLEAN_MATCH"
+  ],
+  "reasons": [
+    {
+      "code": "CLEAN_MATCH",
+      "severity": "APPROVE",
+      "message": "All checks passed within tolerance."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-009",
+    "legal_name": "Industri Verktyg Aktiebolag",
+    "iban": "SE7748740164005242786801",
+    "default_currency": "SEK",
+    "last_verified_at": "2025-11-30",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "2628",
+    "po_numbers": [
+      "PO-2026-0029"
+    ],
+    "claimed_total": "32256",
+    "currency": "SEK",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email states, 'We are submitting invoice number 2628 for your processing,' which indicates a request for payment. The purchase order referenced is 'PO-2026-0029.' The total amount due is clearly stated as 'SEK 32,256.00,' confirming the claimed total and currency."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0029",
+        "po_found": true,
+        "po_vendor_id": "V-009",
+        "po_currency": "SEK",
+        "authorized_total": "32256.00",
+        "received_total": "32256.00",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0029",
+            "po_line_no": 1,
+            "sku": "PPE-009",
+            "quantity_ordered": 26,
+            "quantity_received": 26,
+            "condition": "OK",
+            "unit_price": "826.00",
+            "line_total": "21476.00"
+          },
+          {
+            "po_number": "PO-2026-0029",
+            "po_line_no": 2,
+            "sku": "CAL-002",
+            "quantity_ordered": 4,
+            "quantity_received": 4,
+            "condition": "OK",
+            "unit_price": "1525.00",
+            "line_total": "6100.00"
+          },
+          {
+            "po_number": "PO-2026-0029",
+            "po_line_no": 3,
+            "sku": "PPE-001",
+            "quantity_ordered": 40,
+            "quantity_received": 40,
+            "condition": "OK",
+            "unit_price": "117.00",
+            "line_total": "4680.00"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "32256.00",
+    "aggregate_received_total": "32256.00",
+    "currencies_seen": [
+      "SEK"
+    ]
+  },
+  "audit_summary": "All checks passed; safe to authorize payment."
+}

@@ -1,0 +1,38 @@
+{
+  "msg_id": "M-0064",
+  "decision": "APPROVE",
+  "reason_codes": [
+    "CLEAN_MATCH"
+  ],
+  "reasons": [
+    {
+      "code": "CLEAN_MATCH",
+      "severity": "APPROVE",
+      "message": "All checks passed within tolerance."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-017",
+    "legal_name": "Przemysłowa Technika Sp. z o.o.",
+    "iban": "PL90609789954539910936838662",
+    "default_currency": "PLN",
+    "last_verified_at": "2024-08-22",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "INV-2026-5811",
+    "po_numbers": [],
+    "claimed_total": null,
+    "currency": null,
+    "iban_in_message": null,
+    "intent": "followup",
+    "reasoning": "The email is a follow-up regarding the status of invoice INV-2026-5811, as indicated by the phrase 'just checking in again on invoice INV-2026-5811.' There is no claimed total or currency mentioned, and no IBAN is provided."
+  },
+  "match": {
+    "matched_pos": [],
+    "aggregate_authorized_total": "0",
+    "aggregate_received_total": "0",
+    "currencies_seen": []
+  },
+  "audit_summary": "All checks passed; safe to authorize payment."
+}

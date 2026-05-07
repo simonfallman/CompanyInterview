@@ -1,0 +1,63 @@
+{
+  "msg_id": "M-0018",
+  "decision": "APPROVE",
+  "reason_codes": [
+    "CLEAN_MATCH"
+  ],
+  "reasons": [
+    {
+      "code": "CLEAN_MATCH",
+      "severity": "APPROVE",
+      "message": "All checks passed within tolerance."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-002",
+    "legal_name": "Industri Bearings & Co AB",
+    "iban": "SE3618495931034131647525",
+    "default_currency": "SEK",
+    "last_verified_at": "2025-09-19",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "F24761",
+    "po_numbers": [
+      "PO-2026-0053"
+    ],
+    "claimed_total": "4010036",
+    "currency": "SEK",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email states that 'Faktura F24761 för ramavtalet på ~4 MSEK (PO-2026-0053) är nu utställd' indicating that an invoice is being issued. The exact amount requested is specified as 'Exakt belopp: SEK 4 010 036.' The PO number is mentioned as 'PO-2026-0053' in the body of the email. No IBAN is provided in the email or attachment, as it states '[ange IBAN]'."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0053",
+        "po_found": true,
+        "po_vendor_id": "V-002",
+        "po_currency": "SEK",
+        "authorized_total": "4010036.00",
+        "received_total": "4010036.00",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0053",
+            "po_line_no": 1,
+            "sku": "SVC-099",
+            "quantity_ordered": 2,
+            "quantity_received": 2,
+            "condition": "OK",
+            "unit_price": "2005018.00",
+            "line_total": "4010036.00"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "4010036.00",
+    "aggregate_received_total": "4010036.00",
+    "currencies_seen": [
+      "SEK"
+    ]
+  },
+  "audit_summary": "All checks passed; safe to authorize payment."
+}

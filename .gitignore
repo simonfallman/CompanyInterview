@@ -1,0 +1,21 @@
+.env
+CLAUDE.md
+
+# Case materials — keep local, do not commit
+candidate-package/
+candidate-package.zip
+
+# Generated outputs
+out/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.coverage
+.ruff_cache/
+
+# OS
+.DS_Store

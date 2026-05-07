@@ -1,0 +1,37 @@
+{
+  "msg_id": "M-0058",
+  "decision": "REJECT",
+  "reason_codes": [
+    "UNKNOWN_SENDER",
+    "BANK_CHANGE_REQUIRES_VERIFICATION"
+  ],
+  "reasons": [
+    {
+      "code": "UNKNOWN_SENDER",
+      "severity": "REJECT",
+      "message": "Sender does not match any vendor in the master file."
+    },
+    {
+      "code": "BANK_CHANGE_REQUIRES_VERIFICATION",
+      "severity": "HOLD",
+      "message": "Email requests a change to bank/IBAN details. Never auto-action; AP must verify out-of-band before updating."
+    }
+  ],
+  "vendor": null,
+  "extracted": {
+    "invoice_number": null,
+    "po_numbers": [],
+    "claimed_total": null,
+    "currency": null,
+    "iban_in_message": "SE62600000000000123456789012",
+    "intent": "bank_change",
+    "reasoning": "The email explicitly states a new IBAN: 'IBAN: SE62 6000 0000 0000 1234 5678 9012', which has been stripped of spaces for the output. The intent is classified as 'bank_change' because the email is requesting an update to bank account details."
+  },
+  "match": {
+    "matched_pos": [],
+    "aggregate_authorized_total": "0",
+    "aggregate_received_total": "0",
+    "currencies_seen": []
+  },
+  "audit_summary": "REJECT — UNKNOWN_SENDER, BANK_CHANGE_REQUIRES_VERIFICATION"
+}

@@ -1,0 +1,83 @@
+{
+  "msg_id": "M-0003",
+  "decision": "HOLD",
+  "reason_codes": [
+    "UNDERDELIVERED"
+  ],
+  "reasons": [
+    {
+      "code": "UNDERDELIVERED",
+      "severity": "HOLD",
+      "message": "Invoice claims 16570 but only 11620.00 worth of goods has been received."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-010",
+    "legal_name": "Verkstads Verkstad & Co AB",
+    "iban": "SE9660256342160733754330",
+    "default_currency": "SEK",
+    "last_verified_at": "2026-02-14",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "F21411",
+    "po_numbers": [
+      "PO-2026-0010"
+    ],
+    "claimed_total": "16570",
+    "currency": "SEK",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email references invoice F21411 with a total amount of SEK 16,570.00, indicating a request for payment. The PO number PO-2026-0010 is mentioned in both the email body and the invoice attachment. There is no IBAN provided in the email or attachment, as it states 'please insert' for the IBAN."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0010",
+        "po_found": true,
+        "po_vendor_id": "V-010",
+        "po_currency": "SEK",
+        "authorized_total": "16570.00",
+        "received_total": "11620.00",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0010",
+            "po_line_no": 1,
+            "sku": "RAW-005",
+            "quantity_ordered": 2,
+            "quantity_received": 2,
+            "condition": "OK",
+            "unit_price": "1052.00",
+            "line_total": "2104.00"
+          },
+          {
+            "po_number": "PO-2026-0010",
+            "po_line_no": 2,
+            "sku": "CAL-008",
+            "quantity_ordered": 6,
+            "quantity_received": 6,
+            "condition": "OK",
+            "unit_price": "1586.00",
+            "line_total": "9516.00"
+          },
+          {
+            "po_number": "PO-2026-0010",
+            "po_line_no": 3,
+            "sku": "CAL-001",
+            "quantity_ordered": 3,
+            "quantity_received": 0,
+            "condition": "OK",
+            "unit_price": "1650.00",
+            "line_total": "4950.00"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "16570.00",
+    "aggregate_received_total": "11620.00",
+    "currencies_seen": [
+      "SEK"
+    ]
+  },
+  "audit_summary": "HOLD — UNDERDELIVERED"
+}

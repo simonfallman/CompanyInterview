@@ -1,0 +1,73 @@
+{
+  "msg_id": "M-0029",
+  "decision": "HOLD",
+  "reason_codes": [
+    "UNDERDELIVERED"
+  ],
+  "reasons": [
+    {
+      "code": "UNDERDELIVERED",
+      "severity": "HOLD",
+      "message": "Invoice claims 12165 but only 0.00 worth of goods has been received."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-001",
+    "legal_name": "Mälardal Komponenter AB",
+    "iban": "SE4418196001338908386379",
+    "default_currency": "SEK",
+    "last_verified_at": "2025-11-19",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "INV-2026-2195",
+    "po_numbers": [
+      "PO-2026-0041"
+    ],
+    "claimed_total": "12165",
+    "currency": "SEK",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email explicitly states 'sending invoice INV-2026-2195' indicating a request for payment. The PO number 'PO-2026-0041' is referenced in the body. The total amount requested is 'total SEK 12,165.00', which confirms the claimed total and its currency as SEK. There is no IBAN provided, as the attachment states 'IBAN: [please request]'. Therefore, the intent is classified as 'invoice'."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0041",
+        "po_found": true,
+        "po_vendor_id": "V-001",
+        "po_currency": "SEK",
+        "authorized_total": "12165.00",
+        "received_total": "0.00",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0041",
+            "po_line_no": 1,
+            "sku": "CAL-002",
+            "quantity_ordered": 6,
+            "quantity_received": 0,
+            "condition": "OK",
+            "unit_price": "1528.00",
+            "line_total": "9168.00"
+          },
+          {
+            "po_number": "PO-2026-0041",
+            "po_line_no": 2,
+            "sku": "CAL-005",
+            "quantity_ordered": 1,
+            "quantity_received": 0,
+            "condition": "OK",
+            "unit_price": "2997.00",
+            "line_total": "2997.00"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "12165.00",
+    "aggregate_received_total": "0.00",
+    "currencies_seen": [
+      "SEK"
+    ]
+  },
+  "audit_summary": "HOLD — UNDERDELIVERED"
+}

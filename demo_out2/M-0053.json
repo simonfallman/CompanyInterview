@@ -1,0 +1,73 @@
+{
+  "msg_id": "M-0053",
+  "decision": "HOLD",
+  "reason_codes": [
+    "UNDERDELIVERED"
+  ],
+  "reasons": [
+    {
+      "code": "UNDERDELIVERED",
+      "severity": "HOLD",
+      "message": "Invoice claims 461.6 but only 340.20 worth of goods has been received."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-016",
+    "legal_name": "Lyonnaise Équipements S.A.",
+    "iban": "FR5474815726511351161916295",
+    "default_currency": "EUR",
+    "last_verified_at": "2024-10-30",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "889205",
+    "po_numbers": [
+      "PO-2026-0036"
+    ],
+    "claimed_total": "461.6",
+    "currency": "EUR",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email is re-sending invoice 889205, which is explicitly stated in the body. The claimed total of EUR 461.60 is mentioned as the total amount due. The PO number PO-2026-0036 is referenced in relation to the shipment. There is no IBAN provided in the email or attachment, as it states 'please insert'."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0036",
+        "po_found": true,
+        "po_vendor_id": "V-016",
+        "po_currency": "EUR",
+        "authorized_total": "461.60",
+        "received_total": "340.20",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0036",
+            "po_line_no": 1,
+            "sku": "PPE-007",
+            "quantity_ordered": 2,
+            "quantity_received": 0,
+            "condition": "OK",
+            "unit_price": "60.70",
+            "line_total": "121.40"
+          },
+          {
+            "po_number": "PO-2026-0036",
+            "po_line_no": 2,
+            "sku": "PPE-006",
+            "quantity_ordered": 12,
+            "quantity_received": 12,
+            "condition": "OK",
+            "unit_price": "28.35",
+            "line_total": "340.20"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "461.60",
+    "aggregate_received_total": "340.20",
+    "currencies_seen": [
+      "EUR"
+    ]
+  },
+  "audit_summary": "HOLD — UNDERDELIVERED"
+}

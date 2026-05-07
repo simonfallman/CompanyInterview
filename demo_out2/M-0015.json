@@ -1,0 +1,93 @@
+{
+  "msg_id": "M-0015",
+  "decision": "APPROVE",
+  "reason_codes": [
+    "CLEAN_MATCH"
+  ],
+  "reasons": [
+    {
+      "code": "CLEAN_MATCH",
+      "severity": "APPROVE",
+      "message": "All checks passed within tolerance."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-016",
+    "legal_name": "Lyonnaise Équipements S.A.",
+    "iban": "FR5474815726511351161916295",
+    "default_currency": "EUR",
+    "last_verified_at": "2024-10-30",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "F26711",
+    "po_numbers": [
+      "PO-2026-0016"
+    ],
+    "claimed_total": "2051.96",
+    "currency": "EUR",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email references the invoice number F26711 and states that it is for the order PO-2026-0016. The total amount requested for payment is explicitly mentioned as 2 051,96 EUR. There is no IBAN provided in the email or attachment, as it states 'IBAN : [à compléter]'. Therefore, the intent is classified as 'invoice' since it is requesting payment for goods received."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0016",
+        "po_found": true,
+        "po_vendor_id": "V-016",
+        "po_currency": "EUR",
+        "authorized_total": "2051.96",
+        "received_total": "2051.96",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0016",
+            "po_line_no": 1,
+            "sku": "PPE-006",
+            "quantity_ordered": 8,
+            "quantity_received": 8,
+            "condition": "OK",
+            "unit_price": "24.43",
+            "line_total": "195.44"
+          },
+          {
+            "po_number": "PO-2026-0016",
+            "po_line_no": 2,
+            "sku": "PPE-007",
+            "quantity_ordered": 3,
+            "quantity_received": 3,
+            "condition": "OK",
+            "unit_price": "66.00",
+            "line_total": "198.00"
+          },
+          {
+            "po_number": "PO-2026-0016",
+            "po_line_no": 3,
+            "sku": "BRG-003",
+            "quantity_ordered": 12,
+            "quantity_received": 12,
+            "condition": "OK",
+            "unit_price": "86.26",
+            "line_total": "1035.12"
+          },
+          {
+            "po_number": "PO-2026-0016",
+            "po_line_no": 4,
+            "sku": "BRG-007",
+            "quantity_ordered": 30,
+            "quantity_received": 30,
+            "condition": "OK",
+            "unit_price": "20.78",
+            "line_total": "623.40"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "2051.96",
+    "aggregate_received_total": "2051.96",
+    "currencies_seen": [
+      "EUR"
+    ]
+  },
+  "audit_summary": "All checks passed; safe to authorize payment."
+}

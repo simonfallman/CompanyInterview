@@ -1,0 +1,73 @@
+{
+  "msg_id": "M-0055",
+  "decision": "REJECT",
+  "reason_codes": [
+    "IBAN_MISMATCH"
+  ],
+  "reasons": [
+    {
+      "code": "IBAN_MISMATCH",
+      "severity": "REJECT",
+      "message": "IBAN in message does not match vendor master IBAN. Message IBAN: 'PL12105000997600000064239857'; vendor IBAN on file: 'PL77757356163929080682742093'."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-018",
+    "legal_name": "Inżynieria Łożyska S.A.",
+    "iban": "PL77757356163929080682742093",
+    "default_currency": "PLN",
+    "last_verified_at": "2026-01-13",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "F25088",
+    "po_numbers": [
+      "PO-2026-0038"
+    ],
+    "claimed_total": "6940.96",
+    "currency": "PLN",
+    "iban_in_message": "PL12105000997600000064239857",
+    "intent": "followup",
+    "reasoning": "The email is a follow-up regarding invoice F25088, as stated in the phrase 'We are following up regarding invoice F25088'. The claimed total of 6940.96 is explicitly mentioned as 'Total amount due: PLN 6,940.96'. The PO number is referenced as 'Purchase order reference: PO-2026-0038'. An IBAN is provided in the attachment as 'IBAN: PL12 1050 0099 7600 0000 6423 9857'. The intent is classified as 'followup' since the email is checking on the status of the invoice."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0038",
+        "po_found": true,
+        "po_vendor_id": "V-018",
+        "po_currency": "PLN",
+        "authorized_total": "6940.96",
+        "received_total": "6940.96",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0038",
+            "po_line_no": 1,
+            "sku": "PPE-003",
+            "quantity_ordered": 18,
+            "quantity_received": 18,
+            "condition": "OK",
+            "unit_price": "75.42",
+            "line_total": "1357.56"
+          },
+          {
+            "po_number": "PO-2026-0038",
+            "po_line_no": 2,
+            "sku": "PPE-009",
+            "quantity_ordered": 20,
+            "quantity_received": 20,
+            "condition": "OK",
+            "unit_price": "279.17",
+            "line_total": "5583.40"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "6940.96",
+    "aggregate_received_total": "6940.96",
+    "currencies_seen": [
+      "PLN"
+    ]
+  },
+  "audit_summary": "REJECT — IBAN_MISMATCH"
+}

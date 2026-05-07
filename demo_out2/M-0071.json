@@ -1,0 +1,38 @@
+{
+  "msg_id": "M-0071",
+  "decision": "HOLD",
+  "reason_codes": [
+    "FAILED_EXTRACTION"
+  ],
+  "reasons": [
+    {
+      "code": "FAILED_EXTRACTION",
+      "severity": "HOLD",
+      "message": "LLM could not extract structured fields from this email."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-019",
+    "legal_name": "Technika Obróbka S.A.",
+    "iban": "PL93059808255377446513850530",
+    "default_currency": "PLN",
+    "last_verified_at": "2026-02-27",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": null,
+    "po_numbers": [],
+    "claimed_total": null,
+    "currency": null,
+    "iban_in_message": null,
+    "intent": "unknown",
+    "reasoning": "The email is an out-of-office notification and does not contain any request for payment, invoice details, or any other actionable items. Therefore, all fields are null, and the intent is classified as 'unknown'."
+  },
+  "match": {
+    "matched_pos": [],
+    "aggregate_authorized_total": "0",
+    "aggregate_received_total": "0",
+    "currencies_seen": []
+  },
+  "audit_summary": "HOLD — FAILED_EXTRACTION"
+}

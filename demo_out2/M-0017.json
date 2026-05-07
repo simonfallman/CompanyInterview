@@ -1,0 +1,63 @@
+{
+  "msg_id": "M-0017",
+  "decision": "APPROVE",
+  "reason_codes": [
+    "CLEAN_MATCH"
+  ],
+  "reasons": [
+    {
+      "code": "CLEAN_MATCH",
+      "severity": "APPROVE",
+      "message": "All checks passed within tolerance."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-010",
+    "legal_name": "Verkstads Verkstad & Co AB",
+    "iban": "SE9660256342160733754330",
+    "default_currency": "SEK",
+    "last_verified_at": "2026-02-14",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "F22234",
+    "po_numbers": [
+      "PO-2026-0052"
+    ],
+    "claimed_total": "1921741",
+    "currency": "SEK",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email is requesting payment for the invoice F22234, which is explicitly stated in the body as relating to the total amount of 1 921 741,00 SEK. The PO number PO-2026-0052 is mentioned in both the body and the attachment, confirming its relevance. There is no IBAN provided in the email or attachment, as it states 'ange IBAN'. The intent is classified as 'invoice' since the email is focused on requesting payment."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0052",
+        "po_found": true,
+        "po_vendor_id": "V-010",
+        "po_currency": "SEK",
+        "authorized_total": "1921741.00",
+        "received_total": "1921741.00",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0052",
+            "po_line_no": 1,
+            "sku": "SVC-099",
+            "quantity_ordered": 1,
+            "quantity_received": 1,
+            "condition": "OK",
+            "unit_price": "1921741.00",
+            "line_total": "1921741.00"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "1921741.00",
+    "aggregate_received_total": "1921741.00",
+    "currencies_seen": [
+      "SEK"
+    ]
+  },
+  "audit_summary": "All checks passed; safe to authorize payment."
+}

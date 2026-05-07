@@ -1,0 +1,63 @@
+{
+  "msg_id": "M-0016",
+  "decision": "APPROVE",
+  "reason_codes": [
+    "CLEAN_MATCH"
+  ],
+  "reasons": [
+    {
+      "code": "CLEAN_MATCH",
+      "severity": "APPROVE",
+      "message": "All checks passed within tolerance."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-003",
+    "legal_name": "Nordic Maskin AB",
+    "iban": "SE5739537672423884969653",
+    "default_currency": "SEK",
+    "last_verified_at": "2025-12-02",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "264285",
+    "po_numbers": [
+      "PO-2026-0051"
+    ],
+    "claimed_total": "3148902",
+    "currency": "SEK",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email references invoice number 264285 and states that it is for the order PO-2026-0051. The claimed total is explicitly mentioned as 3 148 902 SEK. There is no IBAN provided in the email or attachment, as it states '[ange IBAN]'. The intent is classified as 'invoice' since the email is requesting payment for the goods delivered."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0051",
+        "po_found": true,
+        "po_vendor_id": "V-003",
+        "po_currency": "SEK",
+        "authorized_total": "3148902.00",
+        "received_total": "3148902.00",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0051",
+            "po_line_no": 1,
+            "sku": "SVC-099",
+            "quantity_ordered": 2,
+            "quantity_received": 2,
+            "condition": "OK",
+            "unit_price": "1574451.00",
+            "line_total": "3148902.00"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "3148902.00",
+    "aggregate_received_total": "3148902.00",
+    "currencies_seen": [
+      "SEK"
+    ]
+  },
+  "audit_summary": "All checks passed; safe to authorize payment."
+}

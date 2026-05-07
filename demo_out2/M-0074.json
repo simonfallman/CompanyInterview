@@ -1,0 +1,73 @@
+{
+  "msg_id": "M-0074",
+  "decision": "APPROVE",
+  "reason_codes": [
+    "CLEAN_MATCH"
+  ],
+  "reasons": [
+    {
+      "code": "CLEAN_MATCH",
+      "severity": "APPROVE",
+      "message": "All checks passed within tolerance."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-014",
+    "legal_name": "Technik Mechanik GmbH & Co. KG",
+    "iban": "DE81539782978459028221",
+    "default_currency": "EUR",
+    "last_verified_at": "2025-09-08",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": null,
+    "po_numbers": [
+      "PO-2026-0014"
+    ],
+    "claimed_total": null,
+    "currency": null,
+    "iban_in_message": null,
+    "intent": "followup",
+    "reasoning": "The email discusses a delivery delay for PO PO-2026-0014, indicating that it is a follow-up regarding the status of an order rather than a request for payment or a change in bank details. There are no monetary totals, currency, or IBAN mentioned in the email."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0014",
+        "po_found": true,
+        "po_vendor_id": "V-014",
+        "po_currency": "EUR",
+        "authorized_total": "963.32",
+        "received_total": "963.32",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0014",
+            "po_line_no": 1,
+            "sku": "FST-013",
+            "quantity_ordered": 8,
+            "quantity_received": 8,
+            "condition": "OK",
+            "unit_price": "25.74",
+            "line_total": "205.92"
+          },
+          {
+            "po_number": "PO-2026-0014",
+            "po_line_no": 2,
+            "sku": "FST-012",
+            "quantity_ordered": 10,
+            "quantity_received": 10,
+            "condition": "OK",
+            "unit_price": "75.74",
+            "line_total": "757.40"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "963.32",
+    "aggregate_received_total": "963.32",
+    "currencies_seen": [
+      "EUR"
+    ]
+  },
+  "audit_summary": "All checks passed; safe to authorize payment."
+}

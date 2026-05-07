@@ -1,0 +1,73 @@
+{
+  "msg_id": "M-0042",
+  "decision": "HOLD",
+  "reason_codes": [
+    "DELIVERY_EXCEPTION"
+  ],
+  "reasons": [
+    {
+      "code": "DELIVERY_EXCEPTION",
+      "severity": "HOLD",
+      "message": "PO PO-2026-0031 line 1 (LUB-002) received in condition: SHORT."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-011",
+    "legal_name": "Industrie Mechanik AG",
+    "iban": "DE63231400710898071180",
+    "default_currency": "EUR",
+    "last_verified_at": "2025-12-06",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "INV-2026-8241",
+    "po_numbers": [
+      "PO-2026-0031"
+    ],
+    "claimed_total": "5471.69",
+    "currency": "PLN",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email references 'Invoice INV-2026-8241 for PO PO-2026-0031' indicating a request for payment. The total amount requested is explicitly stated as 'Total: PLN 5,471.69'. There is no IBAN provided in the email or attachment, as it states 'please see attached PDF' for IBAN details."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0031",
+        "po_found": true,
+        "po_vendor_id": "V-011",
+        "po_currency": "PLN",
+        "authorized_total": "7178.78",
+        "received_total": "6397.11",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0031",
+            "po_line_no": 1,
+            "sku": "LUB-002",
+            "quantity_ordered": 8,
+            "quantity_received": 7,
+            "condition": "SHORT",
+            "unit_price": "781.67",
+            "line_total": "6253.36"
+          },
+          {
+            "po_number": "PO-2026-0031",
+            "po_line_no": 2,
+            "sku": "LUB-010",
+            "quantity_ordered": 1,
+            "quantity_received": 1,
+            "condition": "OK",
+            "unit_price": "925.42",
+            "line_total": "925.42"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "7178.78",
+    "aggregate_received_total": "6397.11",
+    "currencies_seen": [
+      "PLN"
+    ]
+  },
+  "audit_summary": "HOLD — DELIVERY_EXCEPTION"
+}

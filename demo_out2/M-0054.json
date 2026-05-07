@@ -1,0 +1,73 @@
+{
+  "msg_id": "M-0054",
+  "decision": "APPROVE",
+  "reason_codes": [
+    "CLEAN_MATCH"
+  ],
+  "reasons": [
+    {
+      "code": "CLEAN_MATCH",
+      "severity": "APPROVE",
+      "message": "All checks passed within tolerance."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-018",
+    "legal_name": "Inżynieria Łożyska S.A.",
+    "iban": "PL77757356163929080682742093",
+    "default_currency": "PLN",
+    "last_verified_at": "2026-01-13",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "F25088",
+    "po_numbers": [
+      "PO-2026-0038"
+    ],
+    "claimed_total": "6940.96",
+    "currency": "PLN",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email explicitly states 'We hereby submit invoice number F25088 for your processing' indicating the invoice number. The PO number is mentioned as 'purchase order PO-2026-0038'. The total amount due is clearly stated as 'PLN 6,940.96'. The intent is classified as 'invoice' since the email is requesting payment for the goods listed."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0038",
+        "po_found": true,
+        "po_vendor_id": "V-018",
+        "po_currency": "PLN",
+        "authorized_total": "6940.96",
+        "received_total": "6940.96",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0038",
+            "po_line_no": 1,
+            "sku": "PPE-003",
+            "quantity_ordered": 18,
+            "quantity_received": 18,
+            "condition": "OK",
+            "unit_price": "75.42",
+            "line_total": "1357.56"
+          },
+          {
+            "po_number": "PO-2026-0038",
+            "po_line_no": 2,
+            "sku": "PPE-009",
+            "quantity_ordered": 20,
+            "quantity_received": 20,
+            "condition": "OK",
+            "unit_price": "279.17",
+            "line_total": "5583.40"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "6940.96",
+    "aggregate_received_total": "6940.96",
+    "currencies_seen": [
+      "PLN"
+    ]
+  },
+  "audit_summary": "All checks passed; safe to authorize payment."
+}

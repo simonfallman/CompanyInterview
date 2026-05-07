@@ -1,0 +1,73 @@
+{
+  "msg_id": "M-0022",
+  "decision": "APPROVE",
+  "reason_codes": [
+    "CLEAN_MATCH"
+  ],
+  "reasons": [
+    {
+      "code": "CLEAN_MATCH",
+      "severity": "APPROVE",
+      "message": "All checks passed within tolerance."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-008",
+    "legal_name": "Götaland Teknik AB",
+    "iban": "SE6346247510799118384251",
+    "default_currency": "SEK",
+    "last_verified_at": "2026-03-14",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "8641-A",
+    "po_numbers": [
+      "PO-2026-0008"
+    ],
+    "claimed_total": "9419",
+    "currency": "SEK",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email includes the invoice number '8641-A' and references the PO number 'PO-2026-0008'. The claimed total is explicitly stated as 'SEK 9,419.00'. The intent is classified as 'invoice' because the email is requesting payment for the goods delivered, as indicated by the phrase 'Attached is invoice 8641-A for PO PO-2026-0008, covering the recent delivery.' There is no IBAN provided in the email or attachment."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0008",
+        "po_found": true,
+        "po_vendor_id": "V-008",
+        "po_currency": "SEK",
+        "authorized_total": "9419.00",
+        "received_total": "9419.00",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0008",
+            "po_line_no": 1,
+            "sku": "RPL-012",
+            "quantity_ordered": 7,
+            "quantity_received": 7,
+            "condition": "OK",
+            "unit_price": "893.00",
+            "line_total": "6251.00"
+          },
+          {
+            "po_number": "PO-2026-0008",
+            "po_line_no": 2,
+            "sku": "FST-007",
+            "quantity_ordered": 32,
+            "quantity_received": 32,
+            "condition": "OK",
+            "unit_price": "99.00",
+            "line_total": "3168.00"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "9419.00",
+    "aggregate_received_total": "9419.00",
+    "currencies_seen": [
+      "SEK"
+    ]
+  },
+  "audit_summary": "All checks passed; safe to authorize payment."
+}

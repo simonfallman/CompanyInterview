@@ -1,0 +1,93 @@
+{
+  "msg_id": "M-0036",
+  "decision": "HOLD",
+  "reason_codes": [
+    "UNDERDELIVERED"
+  ],
+  "reasons": [
+    {
+      "code": "UNDERDELIVERED",
+      "severity": "HOLD",
+      "message": "Invoice claims 30290 but only 0.00 worth of goods has been received."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-008",
+    "legal_name": "Götaland Teknik AB",
+    "iban": "SE6346247510799118384251",
+    "default_currency": "SEK",
+    "last_verified_at": "2026-03-14",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "1800-B",
+    "po_numbers": [
+      "PO-2026-0048"
+    ],
+    "claimed_total": "30290",
+    "currency": "SEK",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email includes an invoice number '1800-B' and references PO number 'PO-2026-0048'. It explicitly states a total amount of 'SEK 30,290.00' that is being requested for payment. The intent is classified as 'invoice' since it is requesting payment for goods received."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0048",
+        "po_found": true,
+        "po_vendor_id": "V-008",
+        "po_currency": "SEK",
+        "authorized_total": "30290.00",
+        "received_total": "0.00",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0048",
+            "po_line_no": 1,
+            "sku": "FST-007",
+            "quantity_ordered": 33,
+            "quantity_received": 0,
+            "condition": "OK",
+            "unit_price": "106.00",
+            "line_total": "3498.00"
+          },
+          {
+            "po_number": "PO-2026-0048",
+            "po_line_no": 2,
+            "sku": "RPL-003",
+            "quantity_ordered": 16,
+            "quantity_received": 0,
+            "condition": "OK",
+            "unit_price": "485.00",
+            "line_total": "7760.00"
+          },
+          {
+            "po_number": "PO-2026-0048",
+            "po_line_no": 3,
+            "sku": "RPL-012",
+            "quantity_ordered": 5,
+            "quantity_received": 0,
+            "condition": "OK",
+            "unit_price": "752.00",
+            "line_total": "3760.00"
+          },
+          {
+            "po_number": "PO-2026-0048",
+            "po_line_no": 4,
+            "sku": "FST-012",
+            "quantity_ordered": 23,
+            "quantity_received": 0,
+            "condition": "OK",
+            "unit_price": "664.00",
+            "line_total": "15272.00"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "30290.00",
+    "aggregate_received_total": "0.00",
+    "currencies_seen": [
+      "SEK"
+    ]
+  },
+  "audit_summary": "HOLD — UNDERDELIVERED"
+}

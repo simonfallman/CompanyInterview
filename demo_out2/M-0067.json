@@ -1,0 +1,37 @@
+{
+  "msg_id": "M-0067",
+  "decision": "REJECT",
+  "reason_codes": [
+    "UNKNOWN_SENDER",
+    "FAILED_EXTRACTION"
+  ],
+  "reasons": [
+    {
+      "code": "UNKNOWN_SENDER",
+      "severity": "REJECT",
+      "message": "Sender does not match any vendor in the master file."
+    },
+    {
+      "code": "FAILED_EXTRACTION",
+      "severity": "HOLD",
+      "message": "LLM could not extract structured fields from this email."
+    }
+  ],
+  "vendor": null,
+  "extracted": {
+    "invoice_number": null,
+    "po_numbers": [],
+    "claimed_total": null,
+    "currency": null,
+    "iban_in_message": null,
+    "intent": "unknown",
+    "reasoning": "The email is an invitation to attend Hannover Messe 2026 and does not contain any request for payment, invoice details, or any financial information. It invites the recipient to reserve complimentary delegate passes, which does not classify as a payment request."
+  },
+  "match": {
+    "matched_pos": [],
+    "aggregate_authorized_total": "0",
+    "aggregate_received_total": "0",
+    "currencies_seen": []
+  },
+  "audit_summary": "REJECT — UNKNOWN_SENDER, FAILED_EXTRACTION"
+}

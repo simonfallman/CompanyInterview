@@ -1,0 +1,83 @@
+{
+  "msg_id": "M-0077",
+  "decision": "HOLD",
+  "reason_codes": [
+    "DELIVERY_EXCEPTION"
+  ],
+  "reasons": [
+    {
+      "code": "DELIVERY_EXCEPTION",
+      "severity": "HOLD",
+      "message": "PO PO-2026-0021 line 1 (FST-009) received in condition: DAMAGED."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-001",
+    "legal_name": "Mälardal Komponenter AB",
+    "iban": "SE4418196001338908386379",
+    "default_currency": "SEK",
+    "last_verified_at": "2025-11-19",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": null,
+    "po_numbers": [
+      "PO-2026-0021"
+    ],
+    "claimed_total": "753",
+    "currency": "SEK",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email references PO number 'PO-2026-0021' which is explicitly mentioned in the subject and body. The claimed total of 'approx. SEK 753.00' indicates the amount being requested for payment. The intent is classified as 'invoice' since the email discusses a credit that will be applied to the next invoice, indicating a request for payment related to goods."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0021",
+        "po_found": true,
+        "po_vendor_id": "V-001",
+        "po_currency": "SEK",
+        "authorized_total": "24090.00",
+        "received_total": "20658.00",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0021",
+            "po_line_no": 1,
+            "sku": "FST-009",
+            "quantity_ordered": 47,
+            "quantity_received": 36,
+            "condition": "DAMAGED",
+            "unit_price": "312.00",
+            "line_total": "14664.00"
+          },
+          {
+            "po_number": "PO-2026-0021",
+            "po_line_no": 2,
+            "sku": "FST-005",
+            "quantity_ordered": 46,
+            "quantity_received": 46,
+            "condition": "OK",
+            "unit_price": "129.00",
+            "line_total": "5934.00"
+          },
+          {
+            "po_number": "PO-2026-0021",
+            "po_line_no": 3,
+            "sku": "CAL-005",
+            "quantity_ordered": 1,
+            "quantity_received": 1,
+            "condition": "OK",
+            "unit_price": "3492.00",
+            "line_total": "3492.00"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "24090.00",
+    "aggregate_received_total": "20658.00",
+    "currencies_seen": [
+      "SEK"
+    ]
+  },
+  "audit_summary": "HOLD — DELIVERY_EXCEPTION"
+}

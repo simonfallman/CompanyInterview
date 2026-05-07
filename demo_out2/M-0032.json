@@ -1,0 +1,83 @@
+{
+  "msg_id": "M-0032",
+  "decision": "APPROVE",
+  "reason_codes": [
+    "CLEAN_MATCH"
+  ],
+  "reasons": [
+    {
+      "code": "CLEAN_MATCH",
+      "severity": "APPROVE",
+      "message": "All checks passed within tolerance."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-004",
+    "legal_name": "Nordic Process & Co AB",
+    "iban": "SE6251462704828148932528",
+    "default_currency": "SEK",
+    "last_verified_at": "2025-10-10",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "F20620",
+    "po_numbers": [
+      "PO-2026-0044"
+    ],
+    "claimed_total": "13317",
+    "currency": "SEK",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email is requesting payment for goods delivered, as indicated by the phrase 'We are submitting invoice F20620 for goods delivered under your purchase order PO-2026-0044.' The claimed total is explicitly stated in the attachment as 'Total: SEK 13,317.00'. There is no IBAN provided in the email or attachment, only a note to see the attached PDF for IBAN details."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0044",
+        "po_found": true,
+        "po_vendor_id": "V-004",
+        "po_currency": "SEK",
+        "authorized_total": "13317.00",
+        "received_total": "13317.00",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0044",
+            "po_line_no": 1,
+            "sku": "RAW-006",
+            "quantity_ordered": 12,
+            "quantity_received": 12,
+            "condition": "OK",
+            "unit_price": "719.00",
+            "line_total": "8628.00"
+          },
+          {
+            "po_number": "PO-2026-0044",
+            "po_line_no": 2,
+            "sku": "FST-010",
+            "quantity_ordered": 14,
+            "quantity_received": 14,
+            "condition": "OK",
+            "unit_price": "105.00",
+            "line_total": "1470.00"
+          },
+          {
+            "po_number": "PO-2026-0044",
+            "po_line_no": 3,
+            "sku": "RAW-008",
+            "quantity_ordered": 3,
+            "quantity_received": 3,
+            "condition": "OK",
+            "unit_price": "1073.00",
+            "line_total": "3219.00"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "13317.00",
+    "aggregate_received_total": "13317.00",
+    "currencies_seen": [
+      "SEK"
+    ]
+  },
+  "audit_summary": "All checks passed; safe to authorize payment."
+}

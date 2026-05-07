@@ -1,0 +1,73 @@
+{
+  "msg_id": "M-0009",
+  "decision": "APPROVE",
+  "reason_codes": [
+    "CLEAN_MATCH"
+  ],
+  "reasons": [
+    {
+      "code": "CLEAN_MATCH",
+      "severity": "APPROVE",
+      "message": "All checks passed within tolerance."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-006",
+    "legal_name": "Götaland Verkstad AB",
+    "iban": "SE6411656670106513338726",
+    "default_currency": "SEK",
+    "last_verified_at": "2025-09-03",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "849739",
+    "po_numbers": [
+      "PO-2026-0026"
+    ],
+    "claimed_total": "15787",
+    "currency": "SEK",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email explicitly states 'The total amount due is SEK 15,787.00,' which indicates the claimed total. The PO number is referenced as 'PO-2026-0026' in the email body. The intent is classified as 'invoice' since the email is requesting payment for the attached invoice."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0026",
+        "po_found": true,
+        "po_vendor_id": "V-006",
+        "po_currency": "SEK",
+        "authorized_total": "15787.00",
+        "received_total": "15787.00",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0026",
+            "po_line_no": 1,
+            "sku": "RPL-008",
+            "quantity_ordered": 5,
+            "quantity_received": 5,
+            "condition": "OK",
+            "unit_price": "2495.00",
+            "line_total": "12475.00"
+          },
+          {
+            "po_number": "PO-2026-0026",
+            "po_line_no": 2,
+            "sku": "LUB-008",
+            "quantity_ordered": 12,
+            "quantity_received": 12,
+            "condition": "OK",
+            "unit_price": "276.00",
+            "line_total": "3312.00"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "15787.00",
+    "aggregate_received_total": "15787.00",
+    "currencies_seen": [
+      "SEK"
+    ]
+  },
+  "audit_summary": "All checks passed; safe to authorize payment."
+}

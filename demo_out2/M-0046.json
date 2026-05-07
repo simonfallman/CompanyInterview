@@ -1,0 +1,44 @@
+{
+  "msg_id": "M-0046",
+  "decision": "REJECT",
+  "reason_codes": [
+    "IBAN_MISMATCH",
+    "BANK_CHANGE_REQUIRES_VERIFICATION"
+  ],
+  "reasons": [
+    {
+      "code": "IBAN_MISMATCH",
+      "severity": "REJECT",
+      "message": "IBAN in message does not match vendor master IBAN. Message IBAN: 'SE4746872343098050097883'; vendor IBAN on file: 'SE4746872343098050097882'."
+    },
+    {
+      "code": "BANK_CHANGE_REQUIRES_VERIFICATION",
+      "severity": "HOLD",
+      "message": "Email requests a change to bank/IBAN details. Never auto-action; AP must verify out-of-band before updating."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-007",
+    "legal_name": "Nordic Industri AB",
+    "iban": "SE4746872343098050097882",
+    "default_currency": "SEK",
+    "last_verified_at": "2025-11-24",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": null,
+    "po_numbers": [],
+    "claimed_total": null,
+    "currency": null,
+    "iban_in_message": "SE4746872343098050097883",
+    "intent": "bank_change",
+    "reasoning": "The email explicitly states that Nordic Industri AB will be updating their bank account details, with the IBAN provided as 'SE4746872343098050097883'. There is no request for payment or mention of an invoice total, which leads to the classification of intent as 'bank_change'. No PO numbers or claimed totals are present in the email."
+  },
+  "match": {
+    "matched_pos": [],
+    "aggregate_authorized_total": "0",
+    "aggregate_received_total": "0",
+    "currencies_seen": []
+  },
+  "audit_summary": "REJECT — IBAN_MISMATCH, BANK_CHANGE_REQUIRES_VERIFICATION"
+}

@@ -1,0 +1,93 @@
+{
+  "msg_id": "M-0020",
+  "decision": "HOLD",
+  "reason_codes": [
+    "UNDERDELIVERED"
+  ],
+  "reasons": [
+    {
+      "code": "UNDERDELIVERED",
+      "severity": "HOLD",
+      "message": "Invoice claims 26220 but only 11144.00 worth of goods has been received."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-004",
+    "legal_name": "Nordic Process & Co AB",
+    "iban": "SE6251462704828148932528",
+    "default_currency": "SEK",
+    "last_verified_at": "2025-10-10",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "F21318",
+    "po_numbers": [
+      "PO-2026-0004"
+    ],
+    "claimed_total": "26220",
+    "currency": "SEK",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email is requesting payment for invoice F21318, which is explicitly stated in the body as 'We are submitting invoice F21318 for your processing.' The total amount due is clearly mentioned as 'SEK 26,220.00.' The PO number referenced is 'PO-2026-0004,' which is included in both the email body and the invoice attachment."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0004",
+        "po_found": true,
+        "po_vendor_id": "V-004",
+        "po_currency": "SEK",
+        "authorized_total": "26220.00",
+        "received_total": "11144.00",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0004",
+            "po_line_no": 1,
+            "sku": "RAW-006",
+            "quantity_ordered": 6,
+            "quantity_received": 6,
+            "condition": "OK",
+            "unit_price": "634.00",
+            "line_total": "3804.00"
+          },
+          {
+            "po_number": "PO-2026-0004",
+            "po_line_no": 2,
+            "sku": "RAW-003",
+            "quantity_ordered": 10,
+            "quantity_received": 10,
+            "condition": "OK",
+            "unit_price": "734.00",
+            "line_total": "7340.00"
+          },
+          {
+            "po_number": "PO-2026-0004",
+            "po_line_no": 3,
+            "sku": "FST-013",
+            "quantity_ordered": 26,
+            "quantity_received": 0,
+            "condition": "OK",
+            "unit_price": "295.00",
+            "line_total": "7670.00"
+          },
+          {
+            "po_number": "PO-2026-0004",
+            "po_line_no": 4,
+            "sku": "RAW-008",
+            "quantity_ordered": 7,
+            "quantity_received": 0,
+            "condition": "OK",
+            "unit_price": "1058.00",
+            "line_total": "7406.00"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "26220.00",
+    "aggregate_received_total": "11144.00",
+    "currencies_seen": [
+      "SEK"
+    ]
+  },
+  "audit_summary": "HOLD — UNDERDELIVERED"
+}

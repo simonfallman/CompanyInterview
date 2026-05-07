@@ -1,0 +1,93 @@
+{
+  "msg_id": "M-0034",
+  "decision": "APPROVE",
+  "reason_codes": [
+    "CLEAN_MATCH"
+  ],
+  "reasons": [
+    {
+      "code": "CLEAN_MATCH",
+      "severity": "APPROVE",
+      "message": "All checks passed within tolerance."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-006",
+    "legal_name": "Götaland Verkstad AB",
+    "iban": "SE6411656670106513338726",
+    "default_currency": "SEK",
+    "last_verified_at": "2025-09-03",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "9484-B",
+    "po_numbers": [
+      "PO-2026-0046"
+    ],
+    "claimed_total": "39849",
+    "currency": "SEK",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email references invoice 9484-B and states it is for the supply of industrial spare parts and lubricants, with a total value just under 40 TSEK. The attachment confirms the total as SEK 39,849.00. The PO number mentioned is PO-2026-0046, which is included in the email body."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0046",
+        "po_found": true,
+        "po_vendor_id": "V-006",
+        "po_currency": "SEK",
+        "authorized_total": "39849.00",
+        "received_total": "39849.00",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0046",
+            "po_line_no": 1,
+            "sku": "RPL-007",
+            "quantity_ordered": 2,
+            "quantity_received": 2,
+            "condition": "OK",
+            "unit_price": "1030.00",
+            "line_total": "2060.00"
+          },
+          {
+            "po_number": "PO-2026-0046",
+            "po_line_no": 2,
+            "sku": "LUB-001",
+            "quantity_ordered": 8,
+            "quantity_received": 8,
+            "condition": "OK",
+            "unit_price": "4214.00",
+            "line_total": "33712.00"
+          },
+          {
+            "po_number": "PO-2026-0046",
+            "po_line_no": 3,
+            "sku": "RPL-008",
+            "quantity_ordered": 1,
+            "quantity_received": 1,
+            "condition": "OK",
+            "unit_price": "1970.00",
+            "line_total": "1970.00"
+          },
+          {
+            "po_number": "PO-2026-0046",
+            "po_line_no": 4,
+            "sku": "LUB-008",
+            "quantity_ordered": 7,
+            "quantity_received": 7,
+            "condition": "OK",
+            "unit_price": "301.00",
+            "line_total": "2107.00"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "39849.00",
+    "aggregate_received_total": "39849.00",
+    "currencies_seen": [
+      "SEK"
+    ]
+  },
+  "audit_summary": "All checks passed; safe to authorize payment."
+}

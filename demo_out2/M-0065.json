@@ -1,0 +1,44 @@
+{
+  "msg_id": "M-0065",
+  "decision": "REJECT",
+  "reason_codes": [
+    "IBAN_MISMATCH",
+    "BANK_CHANGE_REQUIRES_VERIFICATION"
+  ],
+  "reasons": [
+    {
+      "code": "IBAN_MISMATCH",
+      "severity": "REJECT",
+      "message": "IBAN in message does not match vendor master IBAN. Message IBAN: 'MT84MALT011000012345MTLCAST001S'; vendor IBAN on file: 'FR1261938182574133672737315'."
+    },
+    {
+      "code": "BANK_CHANGE_REQUIRES_VERIFICATION",
+      "severity": "HOLD",
+      "message": "Email requests a change to bank/IBAN details. Never auto-action; AP must verify out-of-band before updating."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-015",
+    "legal_name": "Européenne Maintenance SAS",
+    "iban": "FR1261938182574133672737315",
+    "default_currency": "EUR",
+    "last_verified_at": "2024-07-31",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "2628",
+    "po_numbers": [],
+    "claimed_total": null,
+    "currency": null,
+    "iban_in_message": "MT84MALT011000012345MTLCAST001S",
+    "intent": "bank_change",
+    "reasoning": "The email references an updated bank account with the phrase 'for the upcoming payment please use this updated bank account: MT84MALT011000012345MTLCAST001S', indicating a request to change bank details. There is no mention of a specific payment amount or currency, and the invoice number '2628' is explicitly stated."
+  },
+  "match": {
+    "matched_pos": [],
+    "aggregate_authorized_total": "0",
+    "aggregate_received_total": "0",
+    "currencies_seen": []
+  },
+  "audit_summary": "REJECT — IBAN_MISMATCH, BANK_CHANGE_REQUIRES_VERIFICATION"
+}

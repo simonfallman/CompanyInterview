@@ -1,0 +1,44 @@
+{
+  "msg_id": "M-0048",
+  "decision": "REJECT",
+  "reason_codes": [
+    "IBAN_MISMATCH",
+    "BANK_CHANGE_REQUIRES_VERIFICATION"
+  ],
+  "reasons": [
+    {
+      "code": "IBAN_MISMATCH",
+      "severity": "REJECT",
+      "message": "IBAN in message does not match vendor master IBAN. Message IBAN: 'DE81539782978459028222'; vendor IBAN on file: 'DE81539782978459028221'."
+    },
+    {
+      "code": "BANK_CHANGE_REQUIRES_VERIFICATION",
+      "severity": "HOLD",
+      "message": "Email requests a change to bank/IBAN details. Never auto-action; AP must verify out-of-band before updating."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-014",
+    "legal_name": "Technik Mechanik GmbH & Co. KG",
+    "iban": "DE81539782978459028221",
+    "default_currency": "EUR",
+    "last_verified_at": "2025-09-08",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": null,
+    "po_numbers": [],
+    "claimed_total": null,
+    "currency": null,
+    "iban_in_message": "DE81539782978459028222",
+    "intent": "bank_change",
+    "reasoning": "The email explicitly states that the bank account details will change, and it provides a new IBAN: 'DE81539782978459028222'. There is no mention of an invoice or a payment request, which leads to the classification of intent as 'bank_change'. The claimed total and currency fields are null because no payment amount is requested."
+  },
+  "match": {
+    "matched_pos": [],
+    "aggregate_authorized_total": "0",
+    "aggregate_received_total": "0",
+    "currencies_seen": []
+  },
+  "audit_summary": "REJECT — IBAN_MISMATCH, BANK_CHANGE_REQUIRES_VERIFICATION"
+}

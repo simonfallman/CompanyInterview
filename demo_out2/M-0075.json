@@ -1,0 +1,38 @@
+{
+  "msg_id": "M-0075",
+  "decision": "HOLD",
+  "reason_codes": [
+    "MISSING_PO_REFERENCE"
+  ],
+  "reasons": [
+    {
+      "code": "MISSING_PO_REFERENCE",
+      "severity": "HOLD",
+      "message": "Invoice does not reference a PO. AP must clarify with vendor."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-011",
+    "legal_name": "Industrie Mechanik AG",
+    "iban": "DE63231400710898071180",
+    "default_currency": "EUR",
+    "last_verified_at": "2025-12-06",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": null,
+    "po_numbers": [],
+    "claimed_total": "7450",
+    "currency": "EUR",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email states, '3 open items totalling EUR 7,450.00' which indicates the amount being requested for payment. The currency is clearly specified as 'EUR'. There are no PO numbers mentioned in the email or attachment, and no IBAN is provided."
+  },
+  "match": {
+    "matched_pos": [],
+    "aggregate_authorized_total": "0",
+    "aggregate_received_total": "0",
+    "currencies_seen": []
+  },
+  "audit_summary": "HOLD — MISSING_PO_REFERENCE"
+}

@@ -1,0 +1,6 @@
+msg_id,decision,reason_codes,vendor_id,match_basis,intent,po_numbers,claimed_total,currency
+M-0001,APPROVE,CLEAN_MATCH,V-001,exact_email,invoice,PO-2026-0001,36975,SEK
+M-0002,APPROVE,CLEAN_MATCH,V-006,exact_email,invoice,PO-2026-0006,1140,SEK
+M-0003,HOLD,UNDERDELIVERED,V-010,exact_email,invoice,PO-2026-0010,16570,SEK
+M-0004,APPROVE,CLEAN_MATCH,V-009,exact_email,invoice,PO-2026-0029,32256,SEK
+M-0005,HOLD,CURRENCY_MISMATCH,V-013,exact_email,invoice,PO-2026-0013,1216.38,EUR

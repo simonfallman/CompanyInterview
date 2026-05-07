@@ -1,0 +1,44 @@
+{
+  "msg_id": "M-0044",
+  "decision": "REJECT",
+  "reason_codes": [
+    "IBAN_MISMATCH",
+    "BANK_CHANGE_REQUIRES_VERIFICATION"
+  ],
+  "reasons": [
+    {
+      "code": "IBAN_MISMATCH",
+      "severity": "REJECT",
+      "message": "IBAN in message does not match vendor master IBAN. Message IBAN: 'SE5739537672423884969654'; vendor IBAN on file: 'SE5739537672423884969653'."
+    },
+    {
+      "code": "BANK_CHANGE_REQUIRES_VERIFICATION",
+      "severity": "HOLD",
+      "message": "Email requests a change to bank/IBAN details. Never auto-action; AP must verify out-of-band before updating."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-003",
+    "legal_name": "Nordic Maskin AB",
+    "iban": "SE5739537672423884969653",
+    "default_currency": "SEK",
+    "last_verified_at": "2025-12-02",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": null,
+    "po_numbers": [],
+    "claimed_total": null,
+    "currency": null,
+    "iban_in_message": "SE5739537672423884969654",
+    "intent": "bank_change",
+    "reasoning": "The email is requesting an update to bank account details, as indicated by the subject 'Updated bank account details' and the phrases 'we are updating our bank account details for all future transactions' and 'Please update your records to reflect our new banking details for all invoices issued after the effective date noted below.' There are no references to an invoice number, PO numbers, or a claimed total, and the only IBAN mentioned is 'SE5739537672423884969654'."
+  },
+  "match": {
+    "matched_pos": [],
+    "aggregate_authorized_total": "0",
+    "aggregate_received_total": "0",
+    "currencies_seen": []
+  },
+  "audit_summary": "REJECT — IBAN_MISMATCH, BANK_CHANGE_REQUIRES_VERIFICATION"
+}

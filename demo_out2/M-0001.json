@@ -1,0 +1,93 @@
+{
+  "msg_id": "M-0001",
+  "decision": "APPROVE",
+  "reason_codes": [
+    "CLEAN_MATCH"
+  ],
+  "reasons": [
+    {
+      "code": "CLEAN_MATCH",
+      "severity": "APPROVE",
+      "message": "All checks passed within tolerance."
+    }
+  ],
+  "vendor": {
+    "vendor_id": "V-001",
+    "legal_name": "Mälardal Komponenter AB",
+    "iban": "SE4418196001338908386379",
+    "default_currency": "SEK",
+    "last_verified_at": "2025-11-19",
+    "match_basis": "exact_email"
+  },
+  "extracted": {
+    "invoice_number": "333954",
+    "po_numbers": [
+      "PO-2026-0001"
+    ],
+    "claimed_total": "36975",
+    "currency": "SEK",
+    "iban_in_message": null,
+    "intent": "invoice",
+    "reasoning": "The email explicitly states 'sending invoice 333954' indicating a request for payment. The PO number 'PO-2026-0001' is mentioned in both the email body and the attachment. The total amount requested is clearly stated as 'total SEK 36,975.00'. There is no IBAN provided in the email or attachment, as it states 'IBAN: [please request]'. Therefore, the intent is classified as 'invoice'."
+  },
+  "match": {
+    "matched_pos": [
+      {
+        "po_number": "PO-2026-0001",
+        "po_found": true,
+        "po_vendor_id": "V-001",
+        "po_currency": "SEK",
+        "authorized_total": "36975.00",
+        "received_total": "36975.00",
+        "line_diffs": [
+          {
+            "po_number": "PO-2026-0001",
+            "po_line_no": 1,
+            "sku": "FST-005",
+            "quantity_ordered": 65,
+            "quantity_received": 65,
+            "condition": "OK",
+            "unit_price": "131.00",
+            "line_total": "8515.00"
+          },
+          {
+            "po_number": "PO-2026-0001",
+            "po_line_no": 2,
+            "sku": "CAL-002",
+            "quantity_ordered": 4,
+            "quantity_received": 4,
+            "condition": "OK",
+            "unit_price": "1782.00",
+            "line_total": "7128.00"
+          },
+          {
+            "po_number": "PO-2026-0001",
+            "po_line_no": 3,
+            "sku": "CAL-005",
+            "quantity_ordered": 4,
+            "quantity_received": 4,
+            "condition": "OK",
+            "unit_price": "2708.00",
+            "line_total": "10832.00"
+          },
+          {
+            "po_number": "PO-2026-0001",
+            "po_line_no": 4,
+            "sku": "FST-009",
+            "quantity_ordered": 35,
+            "quantity_received": 35,
+            "condition": "OK",
+            "unit_price": "300.00",
+            "line_total": "10500.00"
+          }
+        ]
+      }
+    ],
+    "aggregate_authorized_total": "36975.00",
+    "aggregate_received_total": "36975.00",
+    "currencies_seen": [
+      "SEK"
+    ]
+  },
+  "audit_summary": "All checks passed; safe to authorize payment."
+}
